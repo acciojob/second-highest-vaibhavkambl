@@ -4,21 +4,21 @@ function secondHighest(arr) {
         return -Infinity;
     }
     
-    let first_max = -Infinity;
-    let second_max = -Infinity;
+    let firstMax = -Infinity;
+    let secondMax = -Infinity;
     
     for (let num of arr) {
-        if (num > first_max) {
-            second_max = first_max;
-            first_max = num;
-        } else if (num < first_max && num > second_max) {
-            second_max = num;
+        if (num > firstMax) {
+            secondMax = firstMax;
+            firstMax = num;
+        } else if (num < firstMax && num > secondMax) {
+            secondMax = num;
         }
     }
     
-    if (second_max === -Infinity) {
+    if (secondMax === -Infinity) {
         return -Infinity;
     }
     
-    return second_max;
+    return secondMax;
 }
